@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.banner {
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.178),
+      rgba(0, 0, 0, 0.26)
+    ),
+    url("./background2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Blood Donation Management</title>
+  </head>
+  <body>
+    <header class="bg-green-50">
+      <div class="flex justify-end pr-4 py-2">
+        <input
+          class="block rounded-tl-md rounded-bl-md border-0 py-1.5 pl-4 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+          placeholder="Search..."
+          type="search"
+          name="search"
+          id="search"
+        />
+        <button
+          class="bg-green-500 px-4 border-0 rounded-tr-md rounded-br-md text-black font-bold"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+      <nav class="flex bg-green-500 justify-between px-4 py-4 items-center">
+        <a class="font-bold text-xl logo" href="index.html">Blood Donation</a>
+        <ul class="flex gap-10 font-semibold">
+          <li><a class="text-xl leading-none" href="index.html">Accueil</a></li>
+          <li>
+            <a class="text-xl leading-none" href="donneurs.html">Donneurs</a>
+          </li>
+          <li><a class="text-xl leading-none" href="">Hôpitaux</a></li>
+          <li><a class="text-xl leading-none" href="">Demandes</a></li>
+          <li><a class="text-xl leading-none" href="">Historique</a></li>
+          <li><a class="text-xl leading-none" href="">Informations</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="bg-gray-50 font-sans">
+      <div class="max-w-6xl mx-auto py-8">
+        <h1 class="text-3xl font-bold mb-6 text-center">Offres disponibles</h1>
+        <div class="mb-6">
+          <form class="flex items-center justify-center space-x-4">
+            <div>
+              <label
+                for="bloodType"
+                class="block font-medium text-gray-700 mb-2"
+                >Groupe Sanguin</label
+              >
+              <select
+                id="bloodType"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+              >
+                <option value="all">Tous</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </div>
+            <div>
+              <label for="city" class="block font-medium text-gray-700 mb-2"
+                >Ville</label
+              >
+              <select
+                id="city"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+              >
+                <option value="all">Toutes</option>
+              </select>
+            </div>
+            <button
+              type="button"
+              class="bg-blue-500 text-white font-medium rounded-md px-4 py-2 hover:bg-blue-600"
+              onclick="filterOffers()"
+            >
+              Filtrer
+            </button>
+          </form>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 offers-container"
+        ></div>
+      </div>
+    </section>
+    <!-- Pied de page -->
+    <footer class="bg-green-500 text-black py-10">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-wrap justify-between">
+          <div class="w-full md:w-1/4 mb-6 md:mb-0">
+            <h3 class="font-bold mb-2">À propos</h3>
+            <ul>
+              <li><a href="#" class="hover:underline">Qui sommes-nous</a></li>
+              <li><a href="#" class="hover:underline">Notre mission</a></li>
+              <li><a href="#" class="hover:underline">Contactez-nous</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4 mb-6 md:mb-0">
+            <h3 class="font-bold mb-2">Liens rapides</h3>
+            <ul>
+              <li><a href="#" class="hover:underline">Devenir donneur</a></li>
+              <li><a href="#" class="hover:underline">Faire une demande</a></li>
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4 mb-6 md:mb-0">
+            <h3 class="font-bold mb-2">Suivez-nous</h3>
+            <ul>
+              <li><a href="#" class="hover:underline">Facebook</a></li>
+              <li><a href="#" class="hover:underline">Twitter</a></li>
+              <li><a href="#" class="hover:underline">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4">
+            <h3 class="font-bold mb-2">Mentions légales</h3>
+            <ul>
+              <li>
+                <a href="#" class="hover:underline"
+                  >Politique de confidentialité</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline">Conditions d'utilisation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <p>
+            &copy; 2024 Système de Gestion de Don du Sang. Tous droits réservés.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

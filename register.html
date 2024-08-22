@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <title>Register</title>
+  </head>
+  <body>
+    <header class="bg-green-40">
+      <div class="flex justify-end pr-4 py-2">
+        <input
+          class="block rounded-tl-md rounded-bl-md border-0 py-1.5 pl-4 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+          placeholder="Sarch..."
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search ...."
+        />
+        <button
+          class="bg-green-500 px-4 border-0 rounded-tr-md rounded-br-md text-black font-bold"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+      <nav class="flex bg-green-500 justify-between px-40 py-4 items-center">
+        <a class="font-bold text-2xl logo" href="index.html">Hopital</a>
+        <ul class="flex gap-20 font-semibold">
+          <li><a class="text-xl leading-none" href="">A propos</a></li>
+          <li><a class="text-xl leading-none" href="">Urgence</a></li>
+          <li><a class="text-xl leading-none" href="">Sang Disponible</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="bg-gray-100 flex justify-center items-center h-screen">
+      <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-4">Inscription</h2>
+        <form id="registerForm" class="space-y-4">
+          <div>
+            <label for="username" class="block font-medium text-gray-700 mb-2"
+              >Nom d'utilisateur</label
+            >
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="border border-gray-300 rounded-md px-3 py-2 w-full"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="block font-medium text-gray-700 mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="border border-gray-300 rounded-md px-3 py-2 w-full"
+              required
+            />
+          </div>
+          <div>
+            <label for="password" class="block font-medium text-gray-700 mb-2"
+              >Mot de passe</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="border border-gray-300 rounded-md px-3 py-2 w-full"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-500 text-white font-medium rounded-md px-4 py-2 hover:bg-blue-600"
+          >
+            S'inscrire
+          </button>
+        </form>
+      </div>
+    </main>
+    <footer class="h-32 flex bg-green-500 justify-center items-center">
+      © 2024 Hopital. Tous droits réservés.
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
